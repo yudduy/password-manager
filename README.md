@@ -1,6 +1,6 @@
 # Secure Password Manager
 
-A secure password manager built with Python (FastAPI) backend and Next.js frontend. The password manager uses strong encryption (AES-GCM) and secure key derivation (PBKDF2) to protect your passwords.
+A secure password manager built with Python (FastAPI) backend and Next.js frontend. The password manager uses strong encryption (AES-GCM) and secure key derivation (PBKDF2) to protect your passwords (derived from CS 255 Winter 2025 taught by Dan Boneh).
 
 ## Features
 
