@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boneh's CS255 Password Manager</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../public/icon48.png" alt="Logo" class="logo">
+      <h1>Password Manager</h1>
+    </div>
+
+    <!-- Login View -->
+    <div id="loginView" class="view">
+      <button id="loginWithGoogle" class="btn btn-primary">
+        <img src="../public/google-icon.png" alt="Google" class="google-icon">
+        Sign in with Google
+      </button>
+    </div>
+
+    <!-- Main View (Hidden by default) -->
+    <div id="mainView" class="view hidden">
+      <div class="search-bar">
+        <input type="text" id="searchDomain" placeholder="Search domains...">
+      </div>
+
+      <div class="action-buttons">
+        <button id="addPassword" class="btn btn-secondary">Add Password</button>
+      </div>
+
+      <div id="passwordsList" class="passwords-list">
+        <!-- Passwords will be populated here -->
+      </div>
+    </div>
+
+    <!-- Add Password Form (Hidden by default) -->
+    <div id="addPasswordForm" class="view hidden">
+      <h2>Add New Password</h2>
+      <form id="passwordForm">
+        <div class="form-group">
+          <input type="text" id="domain" placeholder="Domain (e.g., example.com)" required>
+        </div>
+        <div class="form-group password-input">
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="button" class="toggle-password">👁️</button>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="cancelAdd" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+      <div class="password-generator">
+        <h3>Generate Password</h3>
+        <div class="generator-options">
+          <div class="form-group">
+            <label>Length: <span id="lengthValue">16</span></label>
+            <input type="range" id="passwordLength" min="8" max="32" value="16">
+          </div>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" id="includeUppercase" checked>
+              Uppercase
+            </label>
+            <label>
+              <input type="checkbox" id="includeLowercase" checked>
+              Lowercase
+            </label>
+            <label>
+              <input type="checkbox" id="includeNumbers" checked>
+              Numbers
+            </label>
+            <label>
+              <input type="checkbox" id="includeSymbols" checked>
+              Symbols
+            </label>
+          </div>
+        </div>
+        <button id="generatePassword" class="btn btn-secondary">Generate Password</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html> 

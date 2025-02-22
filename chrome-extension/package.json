@@ -1,0 +1,15 @@
+{
+  "name": "secure-password-manager-extension",
+  "version": "1.0.0",
+  "description": "A secure password manager Chrome extension",
+  "scripts": {
+    "generate-icons": "node src/generate-icons.js",
+    "build": "npm run generate-icons"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260"
+  }
+}

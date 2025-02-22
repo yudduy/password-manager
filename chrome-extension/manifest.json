@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Secure Password Manager",
+  "version": "1.0",
+  "description": "A secure password manager Chrome extension",
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "public/icon16.png",
+      "48": "public/icon48.png",
+      "128": "public/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icon16.png",
+    "48": "public/icon48.png",
+    "128": "public/icon128.png"
+  },
+  "oauth2": {
+    "client_id": "314188937187-40lr1gml0m2oghsssilbh39crbvtfo4l.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+} 
